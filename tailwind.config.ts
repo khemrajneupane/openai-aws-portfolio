@@ -5,6 +5,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        "custom-purple": "#9d50bb",
         aws: {
           orange: "#FF9900",
           blue: "#00A1E0",
