@@ -1,0 +1,16 @@
+{
+  "title": "Family Fun",
+  "description": "A digital family album with open and users engaged chat, done in <1>Next.js</1>, <3>Python</3>, <5>Flask</5>, <7>Socket.IO</7>, <9>OpenAI</9>.",
+  "features": {
+    "gallery": "Interactive image viewing using react-image-gallery",
+    "upload": "Upload via file picker or drag-and-drop",
+    "auth": "Only logged-in users can upload/delete photos",
+    "cloudinary": "Images stored in Cloudinary & linked to users",
+    "formatSupport": "Supports JPEG/PNG, max size 5MB",
+    "notifications": "Real-time error/success notifications with react-hot-toast",
+    "nextauth": "NextAuth.js with CredentialsProvider & GoogleProvider",
+    "session": "User session required for uploads and AI chat",
+    "chat": "OpenAI chat and Socket.IO chat implementation"
+  },
+  "viewLive": "View Live"
+}

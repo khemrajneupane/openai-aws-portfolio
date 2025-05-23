@@ -1,0 +1,12 @@
+{
+  "title": "Deiplus Media Platform",
+  "description": "Lead frontend developer for <strong>Radio Dei</strong> platform featuring:",
+  "features": {
+    "radio": "Live radio with Radioplayer",
+    "podcast": "Podcast: audio and video with JWPlayer",
+    "user": "User login & profile management",
+    "favourites": "Add to favourites",
+    "history": "Resume playback & watch history"
+  },
+  "viewLive": "View Live"
+}

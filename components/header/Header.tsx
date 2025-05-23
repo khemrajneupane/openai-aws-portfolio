@@ -4,6 +4,7 @@ import { signOut, useSession } from "next-auth/react";
 import "./header.css";
 import UserAvatar from "../authForm/UserAvatar";
 import { useRouter } from "next/navigation";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 const Header = () => {
   const { data } = useSession();
@@ -24,6 +25,7 @@ const Header = () => {
         {data?.user && <UserAvatar user={user} />}
       </h1>
       <h1>Portfolio</h1>
+      {<LanguageSwitcher />}
       <div className="container-fluid">
         <div className="d-flex justify-content-between align-items-center">
           <nav className="nav-links d-flex align-items-center gap-3">

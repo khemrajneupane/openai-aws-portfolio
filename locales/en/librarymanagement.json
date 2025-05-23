@@ -1,0 +1,15 @@
+{
+  "title": "Library Management System",
+  "description": "A CRUD full stack application for library book loan management, done with Bootstrap, CSS, HTML, Express.js, Material-UI, MongoDB, Node.js, React.js, Redux, TypeScript. Users can sign up, login, loan books or return books. Admins can update, add, delete books.",
+  "auth": "User authentication with login/signup",
+  "borrow": "Borrow and return books functionality",
+  "add": "Admins can add new books",
+  "edit": "Admins can edit book records",
+  "delete": "Admins can delete books",
+  "react": "Built with React.js and Redux",
+  "mongo": "MongoDB for backend storage",
+  "typescript": "TypeScript for type safety and maintainability",
+  "ui": "Styled with Bootstrap, Material-UI, and CSS",
+  "express": "Express.js + Node.js backend API",
+  "link": "View Live"
+}

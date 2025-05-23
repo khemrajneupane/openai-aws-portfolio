@@ -1,0 +1,15 @@
+{
+  "title": "Kirjaston hallintajärjestelmä",
+  "description": "CRUD-kokonaisratkaisu kirjalainojen hallintaan, tehty käyttäen Bootstrapia, CSS:ää, HTML:ää, Express.js:ää, Material-UI:ta, MongoDB:tä, Node.js:ää, React.js:ää, Reduxia ja TypeScriptiä. Käyttäjät voivat rekisteröityä, kirjautua sisään, lainata ja palauttaa kirjoja. Ylläpitäjät voivat päivittää, lisätä ja poistaa kirjoja.",
+  "auth": "Käyttäjien tunnistautuminen ja kirjautuminen",
+  "borrow": "Lainaa ja palauta kirjoja -toiminto",
+  "add": "Ylläpitäjät voivat lisätä uusia kirjoja",
+  "edit": "Ylläpitäjät voivat muokata kirjojen tietoja",
+  "delete": "Ylläpitäjät voivat poistaa kirjoja",
+  "react": "Rakennettu React.js:llä ja Reduxilla",
+  "mongo": "MongoDB taustatallennukseen",
+  "typescript": "TypeScript tyyppiturvallisuuteen ja ylläpidettävyyteen",
+  "ui": "Tyylitelty Bootstrapilla, Material-UI:lla ja CSS:llä",
+  "express": "Express.js + Node.js tausta-API",
+  "link": "Katso Live"
+}

@@ -1,0 +1,11 @@
+{
+  "heading": "Ilkkapohjalainen Uutiset",
+  "description": "Rakensin CMS-pohjaisen frontendin <strong>Imediatille</strong> käyttäen <strong>React.js:ää, Node.js:ää</strong> ja <strong>Malibu</strong>-alustaa (Quintype).",
+  "features": {
+    "login": "Tulo SSO -kirjautuminen",
+    "comments": "Coral-kommentointijärjestelmä",
+    "analytics": "Chartbeat-analytiikka",
+    "bookmarking": "Kirjanmerkit ja aihetunnisteiden seuraaminen"
+  },
+  "viewLive": "Katso Live"
+}

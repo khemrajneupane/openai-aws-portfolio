@@ -1,0 +1,13 @@
+{
+  "title": "Hotellivarausjärjestelmä",
+  "description": "Moderni hotellivaraussovellus kehitetty <strong>Next.js</strong>- ja <strong>Redux</strong>-teknologioilla, tarjoten saumattoman ja responsiivisen käyttökokemuksen. Käyttäjätunnistus ja profiilihallinta toteutettu, sekä kehittyneet suodatusvaihtoehdot henkilökohtaisille hakutuloksille. Kuvankäsittely ja tallennus <strong>Cloudinary</strong>-integraation avulla, <strong>Tailwind CSS</strong> takaa modernin ja reagoivan käyttöliittymän, ja <strong>TypeScript</strong> vahvistaa koodin laatua. <strong>MongoDB</strong> takaa skaalautuvan ja tehokkaan tietojen hallinnan.",
+  "features": {
+    "cloudinary": "Kuvat tallennetaan Cloudinaryyn",
+    "mongodb": "MongoDB / Mongoose tietomallinnuskirjasto (ODM)",
+    "nextjs": "Next.js",
+    "redux": "Redux tila­hallintaan",
+    "tailwind": "Tailwind CSS responsiiviseen käyttöliittymään",
+    "typescript": "TypeScript tyyppiturvallisuuteen"
+  },
+  "viewLive": "Katso Live"
+}

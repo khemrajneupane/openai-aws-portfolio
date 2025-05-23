@@ -1,0 +1,13 @@
+{
+  "freedays": {
+    "title": "Free Days Calculation",
+    "description": "A full-stack web application built with <0>Next.js</0>, enabling users to log in via <1>form authentication</1> or <1>Google login</1>. Logged-in users can mark their free days on a calendar, and the system ranks the most common free days among all users using <2>MongoDB</2>.",
+    "features": {
+      "login": "Secure Login with Google or email/password",
+      "calendar": "Select free days via an interactive calendar",
+      "stats": "See most common free days among all users",
+      "tech": "Built with Next.js, Tailwind CSS, and MongoDB"
+    }
+  },
+  "viewLive": "View Live"
+}

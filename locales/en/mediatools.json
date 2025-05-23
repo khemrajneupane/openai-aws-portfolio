@@ -1,0 +1,10 @@
+{
+  "title": "Fiare Media Tools",
+  "description": "Suite of digital tools for media houses focusing on:",
+  "features": {
+    "automation": "Layout automation & editorial planning",
+    "integrations": "3rd-party tool integrations",
+    "design": "UI design for media workflows"
+  },
+  "viewLive": "View Live"
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Deiplus-mediaplatformi",
+  "description": "Frontend-pääkehittäjä <strong>Radio Dein</strong> alustalle, joka sisältää:",
+  "features": {
+    "radio": "Suora radiolähetys Radioplayerilla",
+    "podcast": "Podcast: ääni ja video JWPlayerilla",
+    "user": "Käyttäjän kirjautuminen ja profiilihallinta",
+    "favourites": "Lisää suosikkeihin",
+    "history": "Jatka katselua ja katseluhistoria"
+  },
+  "viewLive": "Näytä live"
+}

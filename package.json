@@ -14,15 +14,19 @@
     "@aws-sdk/client-lambda": "^3.812.0",
     "bcryptjs": "^3.0.2",
     "framer-motion": "^12.12.1",
+    "i18next": "^25.2.0",
+    "i18next-browser-languagedetector": "^8.1.0",
     "lucide-react": "^0.511.0",
     "mongoose": "^8.15.0",
     "next": "15.3.2",
     "next-auth": "^4.24.5",
     "next-connect": "^1.0.0",
+    "next-i18next": "^15.4.2",
     "next-nprogress-bar": "^2.4.7",
     "openai": "^4.100.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-i18next": "^15.5.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

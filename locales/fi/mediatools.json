@@ -1,0 +1,10 @@
+{
+  "title": "Fiare Media -työkalut",
+  "description": "Medioille suunnattu digitaalinen työkalupaketti, joka keskittyy:",
+  "features": {
+    "automation": "Ulkoasun automatisointi ja toimituksellinen suunnittelu",
+    "integrations": "Kolmannen osapuolen työkalujen integraatiot",
+    "design": "Käyttöliittymäsuunnittelu mediaprosesseihin"
+  },
+  "viewLive": "Katso livenä"
+}

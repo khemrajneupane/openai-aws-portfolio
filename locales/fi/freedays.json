@@ -1,0 +1,13 @@
+{
+  "freedays": {
+    "title": "Vapaapäivien laskenta",
+    "description": "Full stack -verkkosovellus, rakennettu <0>Next.js:llä</0>, jossa käyttäjät voivat kirjautua sisään <1>lomakkeella</1> tai <1>Google-kirjautumisella</1>. Kirjautuneet käyttäjät voivat merkitä vapaapäivänsä kalenteriin, ja järjestelmä laskee yleisimmät vapaapäivät <2>MongoDB:n</2> avulla.",
+    "features": {
+      "login": "Turvallinen kirjautuminen Googlella tai sähköpostilla/salasanalla",
+      "calendar": "Valitse vapaapäivät interaktiivisen kalenterin avulla",
+      "stats": "Näe yleisimmät vapaapäivät kaikilta käyttäjiltä",
+      "tech": "Rakennettu Next.js:llä, Tailwind CSS:llä ja MongoDB:llä"
+    }
+  },
+  "viewLive": "Katso livenä"
+}

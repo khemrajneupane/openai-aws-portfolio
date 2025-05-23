@@ -1,0 +1,16 @@
+{
+  "title": "Perhehuvi",
+  "description": "Digitaalinen perhealbumi avoimella ja käyttäjiä osallistavalla chatilla, tehty <1>Next.js</1>:llä, <3>Pythonilla</3>, <5>Flaskilla</5>, <7>Socket.IO:lla</7>, <9>OpenAI:lla</9>.",
+  "features": {
+    "gallery": "Interaktiivinen kuvanäkymä react-image-galleryn avulla",
+    "upload": "Lataus tiedostovalitsimen tai raahaus ja pudotus -toiminnon avulla",
+    "auth": "Vain kirjautuneet käyttäjät voivat ladata tai poistaa kuvia",
+    "cloudinary": "Kuvat tallennetaan Cloudinaryyn ja linkitetään käyttäjiin",
+    "formatSupport": "Tukee JPEG/PNG-formaatteja, maksimikoko 5MB",
+    "notifications": "Reaaliaikaiset virhe- ja onnistumisilmoitukset react-hot-toastilla",
+    "nextauth": "NextAuth.js CredentialsProviderin ja GoogleProviderin kanssa",
+    "session": "Käyttäjäistunto vaaditaan kuvien lataamiseen ja AI-chatille",
+    "chat": "OpenAI- ja Socket.IO-chatin toteutus"
+  },
+  "viewLive": "Näytä liveversio"
+}

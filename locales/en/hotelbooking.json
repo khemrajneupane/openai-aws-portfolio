@@ -1,0 +1,13 @@
+{
+  "title": "Hotel Booking System",
+  "description": "Developed a modern hotel booking application using <strong>Next.js</strong> and <strong>Redux</strong> for state management, ensuring a seamless and responsive user experience. Implemented user authentication and profile management, along with advanced filtering options for personalized search results. Integrated <strong>Cloudinary</strong> for efficient image processing and storage, <strong>Tailwind CSS</strong> for a sleek and responsive UI, and <strong>TypeScript</strong> for robust code quality. Utilized <strong>MongoDB</strong> for scalable and efficient data management.",
+  "features": {
+    "cloudinary": "Images stored in Cloudinary",
+    "mongodb": "MongoDB / Mongoose Object Data Modeling (ODM) library",
+    "nextjs": "Next.js",
+    "redux": "Redux for state management",
+    "tailwind": "Tailwind CSS for responsive UI",
+    "typescript": "TypeScript for type safety"
+  },
+  "viewLive": "View Live"
+}

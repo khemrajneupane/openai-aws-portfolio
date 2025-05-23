@@ -1,0 +1,13 @@
+{
+  "ilkkapohjalainen": {
+    "heading": "Ilkkapohjalainen News",
+    "description": "Built a CMS-based frontend for <strong>Imediat</strong> using <strong>React.js, Node.js</strong>, and <strong>Malibu</strong> (by Quintype).",
+    "features": {
+      "login": "Tulo SSO for login",
+      "comments": "Coral Comment system",
+      "analytics": "Chartbeat for analytics",
+      "bookmarking": "Bookmarking & tag following"
+    },
+    "viewLive": "View Live"
+  }
+}

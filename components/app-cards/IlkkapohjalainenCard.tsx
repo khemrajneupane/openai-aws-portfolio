@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Newspaper,
   Globe,
@@ -6,43 +8,47 @@ import {
   TrendingUp,
   ExternalLink,
 } from "lucide-react";
+import { useTranslation, Trans } from "next-i18next";
 
 export default function IlkkaPohjalainenCard() {
+  const { t } = useTranslation("ilkkapohjalainen");
+
   return (
     <div className="bg-white border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
       {/* Header */}
       <div className="bg-[#4e225d] px-4 py-3 flex items-center gap-2 border rounded-t">
         <Newspaper className="text-white w-5 h-5" />
-        <h3 className="text-lg font-semibold text-white transition-colors duration-200">
-          Ilkkapohjalainen News
-        </h3>
+        <h1 className="text-lg font-semibold text-white transition-colors duration-200">
+          {t("ilkkapohjalainen.heading")}
+        </h1>
       </div>
 
       {/* Content */}
       <div className="p-4 flex-1 flex flex-col justify-between">
         <div className="space-y-3 text-sm text-gray-700">
           <p>
-            Built a CMS-based frontend for{" "}
-            <strong className="text-gray-900">Imediat</strong> using{" "}
-            <strong className="text-gray-900">React.js, Node.js</strong>, and{" "}
-            <strong>Malibu</strong> (by Quintype).
+            <Trans
+              i18nKey="description"
+              t={t}
+              components={{ strong: <strong className="text-gray-900" /> }}
+            />
           </p>
           <ul className="space-y-2 pl-1">
             <li className="flex items-center gap-2">
               <Globe className="w-4 h-4 text-purple-600" />
-              Tulo SSO for login
+              {t("ilkkapohjalainen.features.login")}
             </li>
             <li className="flex items-center gap-2">
               <MessageCircleHeart className="w-4 h-4 text-pink-500" />
-              Coral Comment system
+              {t("ilkkapohjalainen.features.comments")}
             </li>
             <li className="flex items-center gap-2">
               <TrendingUp className="w-4 h-4 text-aws-blue" />
-              Chartbeat for analytics
+              {t("ilkkapohjalainen.features.analytics")}
             </li>
             <li className="flex items-center gap-2">
               <BookmarkCheck className="w-4 h-4 text-emerald-600" />
-              Bookmarking & tag following
+              {t("ilkkapohjalainen.features.bookmarking")}
             </li>
           </ul>
         </div>
@@ -54,7 +60,7 @@ export default function IlkkaPohjalainenCard() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            View Live <ExternalLink className="w-4 h-4" />
+            {t("viewLive")} <ExternalLink className="w-4 h-4" />
           </a>
         </div>
       </div>
