@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header/Header";
 import { GlobalProvider } from "./GlobalProvider";
 import Script from "next/script";
+import OpenAiChatWindow from "@/components/openAI/OpenAiChatWindow";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,9 +22,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-gray-50`}>
         <GlobalProvider>
-          <div className="min-h-screen">
+          <div className="header-children-spacing">
             <Header />
             <main className="container mx-auto p-4">{children}</main>
+            <OpenAiChatWindow />
             <footer className="bg-[#4e225d] text-white p-4 mt-8">
               <div className="container mx-auto text-center">
                 <p>

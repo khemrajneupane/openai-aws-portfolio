@@ -9,6 +9,7 @@ import FamilyMeetUpCard from "@/components/app-cards/FamilyMeetUpCard";
 import HotelBookingCard from "@/components/app-cards/HotelBookingCard";
 import FreeDaysCard from "@/components/app-cards/FreeDaysCard";
 import { useTranslation, Trans } from "next-i18next";
+import SocketChat from "@/components/socket-chat/SocketChat";
 
 export default function Home() {
   const { t } = useTranslation("common");
@@ -115,6 +116,7 @@ export default function Home() {
           <FamilyMeetUpCard />
           <LibraryManagementCard />
           <FreeDaysCard />
+          <SocketChat />
         </div>
       </section>
 

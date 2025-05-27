@@ -1,0 +1,114 @@
+/* SocketChat.css */
+
+.chat-container {
+  max-width: auto;
+  max-height: min-content;
+  margin: 40px auto;
+  padding: 24px;
+  border-radius: 16px;
+  background: #4e225d;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  color: #f1f1f1;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+header h2 {
+  font-size: 1.8rem;
+  color: #e6b7f6;
+}
+
+.user-inputs .input-group {
+  margin-bottom: 16px;
+}
+
+.user-inputs .input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.user-inputs input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #2c2c3e;
+  color: #f1f1f1;
+  font-size: 1rem;
+}
+
+.user-inputs input:focus {
+  border-color: #ffd700;
+  outline: none;
+  background-color: #35354c;
+}
+
+.user-inputs .message-box {
+  display: flex;
+  gap: 10px;
+}
+
+.user-inputs button {
+  padding: 10px 16px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.user-inputs button:hover {
+  background-color: #0056b3;
+}
+
+.typing-indicator {
+  font-style: italic;
+  color: #aaa;
+  margin-top: 10px;
+}
+.chat-log {
+  max-height: 200px;
+  overflow: scroll;
+}
+.chat-log ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+
+  overflow-y: auto;
+  background: #2c2c3e;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.chat-log li {
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #620303;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.chat-log li.you {
+  background: #025502;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Scrollbar styling for chat log (optional) */
+.chat-log ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-log ul::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 3px;
+}
