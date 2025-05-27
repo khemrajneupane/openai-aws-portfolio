@@ -8,7 +8,7 @@ import React, {
   KeyboardEvent,
 } from "react";
 import io, { Socket } from "socket.io-client";
-import { signOut, useSession } from "next-auth/react";
+//import { useSession } from "next-auth/react";
 import "./SocketChat.css";
 
 interface MessageEvent {
@@ -32,7 +32,7 @@ const SocketChat: React.FC = () => {
   const chatPopupRef = useRef<Window | null>(null);
   const typingTimeoutRef = useRef<Timeout>(null);
   const isTyping = useRef<boolean>(false);
-  const { data } = useSession();
+  //const { data } = useSession();
 
   useEffect(() => {
     socket.on("privateMessage", ({ from, message }: MessageEvent) => {
