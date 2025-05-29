@@ -1,6 +1,6 @@
 # My Portfolio App
 
-A modern, responsive portfolio web application showcasing professional experience, technical skills, client projects, and personal projects.
+A modern, responsive portfolio web application showcasing professional experiences, technical skills, client projects, and personal projects.
 
 ## ✨ Features
 
