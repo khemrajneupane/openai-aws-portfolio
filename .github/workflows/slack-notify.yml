@@ -1,0 +1,110 @@
+name: Notify Slack on Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      message: ${{ steps.get_commit.outputs.message }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Get Commit Message
+        id: get_commit
+        run: echo "message=$(git log -1 --pretty=%B)" >> $GITHUB_OUTPUT
+
+      - name: Simulated Build Step
+        run: |
+          echo "Building..."
+
+  notify-success:
+    needs: build
+    if: success()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Slack - Success
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          COMMIT_MESSAGE: ${{ needs.build.outputs.message }}
+        run: |
+          curl -X POST -H "Content-Type: application/json" -d @- $SLACK_WEBHOOK_URL <<EOF
+          {
+            "blocks": [
+              {
+                "type": "header",
+                "text": {
+                  "type": "plain_text",
+                  "text": "✅ Deployment Succeeded",
+                  "emoji": true
+                }
+              },
+              {
+                "type": "section",
+                "fields": [
+                  { "type": "mrkdwn", "text": "*Repo:*\n<https://github.com/${GITHUB_REPOSITORY}|${GITHUB_REPOSITORY}>" },
+                  { "type": "mrkdwn", "text": "*Branch:*\n${GITHUB_REF_NAME}" },
+                  { "type": "mrkdwn", "text": "*By:*\n${GITHUB_ACTOR}" },
+                  { "type": "mrkdwn", "text": "*Commit:*\n<https://github.com/${GITHUB_REPOSITORY}/commit/${GITHUB_SHA}|${GITHUB_SHA::7}>" }
+                ]
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*Commit Message:*\n${COMMIT_MESSAGE}"
+                }
+              }
+            ]
+          }
+          EOF
+
+  notify-failure:
+    needs: build
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Slack - Failure
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          COMMIT_MESSAGE: ${{ needs.build.outputs.message }}
+        run: |
+          curl -X POST -H "Content-Type: application/json" -d @- $SLACK_WEBHOOK_URL <<EOF
+          {
+            "blocks": [
+              {
+                "type": "header",
+                "text": {
+                  "type": "plain_text",
+                  "text": "❌ Deployment Failed",
+                  "emoji": true
+                }
+              },
+              {
+                "type": "section",
+                "fields": [
+                  { "type": "mrkdwn", "text": "*Repo:*\n<https://github.com/${GITHUB_REPOSITORY}|${GITHUB_REPOSITORY}>" },
+                  { "type": "mrkdwn", "text": "*Branch:*\n${GITHUB_REF_NAME}" },
+                  { "type": "mrkdwn", "text": "*By:*\n${GITHUB_ACTOR}" }
+                ]
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "*Commit Message:*\n${COMMIT_MESSAGE}"
+                }
+              },
+              {
+                "type": "context",
+                "elements": [
+                  { "type": "mrkdwn", "text": "Investigate the failed job in GitHub: <https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}|View Logs>" }
+                ]
+              }
+            ]
+          }
+          EOF
