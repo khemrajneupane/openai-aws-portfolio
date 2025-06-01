@@ -1,6 +1,7 @@
 # My Portfolio App
 
-A modern, responsive portfolio web application showcasing professional experiences, technical skills, client projects, and personal projects.
+- A modern, responsive portfolio web application showcasing professional experiences, technical skills, client projects, and personal projects.
+- Set up GitHub Actions workflows with Slack integration for deployment alerts, featuring success/failure detection, commit metadata extraction, author tagging, and rich Slack Block Kit formatting.
 
 ## ✨ Features
 

@@ -1,0 +1,40 @@
+{
+  "title": "Portfolio-sovellukseni",
+  "subtitle": "Moderni, responsiivinen portfolio-sovellus, joka esittelee ammatillista kokemusta, teknisitä taitoja, asiakasprojekteja ja henkilökohtaisia projekteja.",
+  "viewResume": "Näytä ansioluettelo",
+  "contactMe": "Ota yhteyttä",
+  "features": {
+    "title": "Ominaisuudet",
+    "items": {
+      "personalIntro": "Henkilöesittely: Olen ammattitaitoinen kehittäjä, jolla on vahva tausta full-stack-kehityksessä. Nautin selkeiden, skaalautuvien ja tehokkaiden sovellusten rakentamisesta.",
+      "techStack": "Teknologiavalikoima: Käytän moderneja teknologioita kuten React, Next.js, TypeScript ja Node.js. Näytän ikonit ja taitotasoni korostaakseni vahvuuksiani.",
+      "multilingual": "Monikielinen tuki: Verkkosivustoni tukee sekä englannin että suomen kieltä laajemman yleisön tavoittamiseksi.",
+      "projectShowcase": "Projektiesittely: Esittelen valittuja asiakas- ja omia projektejani selkeillä kuvauksilla, ominaisuuksilla ja linkeillä demoihin tai lähdekoodiin.",
+      "responsiveDesign": "Responsiivinen suunnittelu: Huolehdin siitä, että käyttöliittymä toimii ja näyttää hyvältä kaikilla näytöillä – mobiilista työpöytään.",
+      "animations": "Animaatiot: Käytän sulavia siirtymiä ja liiketehosteita parantaakseni käyttökokemusta.",
+      "secureLogin": "Turvallinen kirjautuminen: Toteutan turvallisen kirjautumisen käyttäen tunnuksia ja noudattaen hyviä tietoturvakäytäntöjä.",
+      "ciCd": "CI/CD: Hyödynnän automaattisia CI/CD-putkia koodin testaamisen ja käyttöönoton nopeuttamiseksi."
+    }
+  },
+  "technologies": {
+    "title": "Käytetyt teknologiat",
+    "framework": "Framework & Ohjelmointikieli",
+    "styling": "Tyylittely & Animaatiot",
+    "localization": "Lokalisointi",
+    "auth": "Tunnistautuminen",
+    "cicd": "CI/CD & DevOps"
+  },
+  "ciCd": {
+    "automatedDeployments": "Automaattiset käyttöönotot main-haaraan työntämisestä",
+    "slackIntegration": "Slack-integraatio käyttöönottoilmoituksiin",
+    "dockerBuilds": "Docker-kuvien rakentaminen",
+    "ghcr": "Pushaus GitHub Container Registryyn",
+    "successFailureAlerts": "Onnistumisen/epäonnistumisen havaitseminen",
+    "commitMetadata": "Commit-metatietojen erottelu",
+    "authorTagging": "Tekijän merkitseminen",
+    "richSlackBlocks": "Rikas Slack Block Kit -muotoilu"
+  },
+  "footer": {
+    "copyright": "Portfolio-sovellukseni. Kaikki oikeudet pidätetään."
+  }
+}

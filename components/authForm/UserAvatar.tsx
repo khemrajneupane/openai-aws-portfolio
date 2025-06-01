@@ -21,7 +21,7 @@ export default function UserAvatar({ user }: { user: User }) {
   }
 
   return user?.image ? (
-    <Link href="/">
+    <Link href="profile">
       <Image
         src={user?.image}
         alt={user?.name}
@@ -31,7 +31,7 @@ export default function UserAvatar({ user }: { user: User }) {
       />
     </Link>
   ) : (
-    <Link href="/">
+    <Link href="/profile" className="flex items-center justify-center">
       <div className="w-6 h-6 rounded-full bg-gray-700 flex items-center justify-center text-xs font-semibold">
         {getInitials(user?.name)}
       </div>

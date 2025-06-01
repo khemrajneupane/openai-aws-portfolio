@@ -5,50 +5,88 @@ import "./header.css";
 import UserAvatar from "../authForm/UserAvatar";
 import { useRouter } from "next/navigation";
 import LanguageSwitcher from "../LanguageSwitcher";
-
+import { Home, Menu, X } from "lucide-react";
+import { useState } from "react";
 const Header = () => {
   const { data } = useSession();
   const router = useRouter();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const logoutHandler = () => {
     signOut();
     router.push("/");
   };
   const user = {
-    _id: data?.user?._id as string, // provide default or handle nulls
+    _id: data?.user?._id as string,
     name: data?.user?.name || "",
     email: data?.user?.email || "",
-    image: data?.user?.image || undefined, // might be undefined
+    image: data?.user?.image || undefined,
   };
   return (
-    <header className="header bg-primary text-white shadow-sm sticky-top py-3">
-      <h1 className="mb-0 fs-6 fs-sm-6 fs-md-5 fs-lg-4 fs-xl-3 fw-bold">
-        {data?.user && <UserAvatar user={user} />}
-      </h1>
-      <h1>Portfolio</h1>
-      {<LanguageSwitcher />}
-      <div className="container-fluid">
-        <div className="d-flex justify-content-between align-items-center">
-          <nav className="nav-links d-flex align-items-center gap-3">
-            {data?.user ? (
-              <button
-                onClick={logoutHandler}
-                className="nav-link btn btn-danger btn-sm px-3 py-1 rounded-pill"
-              >
-                <i className="fas fa-sign-out-alt me-2"></i>Logout
-              </button>
-            ) : (
-              <Link
-                href="/login"
-                className="nav-link btn btn-success btn-sm px-3 py-1 rounded-pill"
-              >
-                <i className="fas fa-sign-in-alt me-2"></i>Login
-              </Link>
-            )}
-          </nav>
+    <header className="custom-header">
+      <div className="header-container">
+        <Link href="/" className="home-button">
+          <Home size={20} />
+        </Link>
+        <div className="desktop-nav">
+          {data?.user && <UserAvatar user={user} />}
+          <Link href="/about" className="nav-button">
+            <i className="fas fa-sign-in-alt me-2"></i>Portfolio
+          </Link>
+          <LanguageSwitcher />
+          {data?.user ? (
+            <button onClick={logoutHandler} className="nav-button logout">
+              <i className="fas fa-sign-out-alt me-2"></i>Logout
+            </button>
+          ) : (
+            <Link href="/login" className="nav-button">
+              <i className="fas fa-sign-in-alt me-2"></i>Login
+            </Link>
+          )}
         </div>
+        {!isMenuOpen && (
+          <button className="menu-toggle" onClick={() => setIsMenuOpen(true)}>
+            <Menu size={24} />
+          </button>
+        )}
       </div>
+      {/* Sidebar Menu */}
+      {isMenuOpen && (
+        <div
+          className="mobile-menu-overlay"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          <div className="mobile-menu" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="close-button"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <X size={24} />
+            </button>
+            <div className="mobile-nav-items">
+              {data?.user && <UserAvatar user={user} />}
+              <Link href="/about" className="nav-button light">
+                <i className="fas fa-sign-in-alt me-2"></i>Portfolio
+              </Link>
+              <div className="nav-button light">
+                <LanguageSwitcher />
+              </div>
+              {data?.user ? (
+                <button
+                  onClick={logoutHandler}
+                  className="nav-button logout light"
+                >
+                  <i className="fas fa-sign-out-alt me-2"></i>Logout
+                </button>
+              ) : (
+                <Link href="/login" className="nav-button light">
+                  <i className="fas fa-sign-in-alt me-2"></i>Login
+                </Link>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
-
 export default Header;

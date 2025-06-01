@@ -1,3 +1,4 @@
+"use client";
 import { useTranslation } from "react-i18next";
 import { LayoutDashboard, Puzzle, Wand2, ExternalLink } from "lucide-react";
 

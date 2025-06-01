@@ -1,3 +1,4 @@
+"use client";
 import {
   ImagePlus,
   Upload,

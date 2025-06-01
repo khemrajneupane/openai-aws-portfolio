@@ -1,0 +1,41 @@
+{
+  "title": "My Portfolio App",
+  "subtitle": "A modern, responsive portfolio web application showcasing professional experiences, technical skills, client projects, and personal projects.",
+  "viewResume": "View Resume",
+  "contactMe": "Contact Me",
+  "features": {
+    "title": "Features",
+
+    "items": {
+      "personalIntro": "Personal introduction: I'm a professional developer with a strong background in full-stack development. I enjoy building clean, scalable, and efficient applications.",
+      "techStack": "Tech stack highlights: I work with modern technologies like React, Next.js, TypeScript, Node.js, and more. I display icons and proficiency levels to highlight my strengths.",
+      "multilingual": "Multilingual support: My website supports both English and Finnish to reach a wider audience.",
+      "projectShowcase": "Project showcase: I present selected client and personal projects with clear descriptions, features, and links to live demos or source code.",
+      "responsiveDesign": "Responsive design: I ensure the UI looks great and functions well on all screen sizes, from mobile to desktop.",
+      "animations": "Animations: I use smooth transitions and motion effects to make the user experience more engaging.",
+      "secureLogin": "Secure login: I implement secure, credentials-based authentication following best practices.",
+      "ciCd": "CI/CD: I use automated Continuous Integration and Deployment pipelines to streamline testing and deployment of my projects."
+    }
+  },
+  "technologies": {
+    "title": "Technologies Used",
+    "framework": "Framework & Language",
+    "styling": "Styling & Animation",
+    "localization": "Localization",
+    "auth": "Authentication",
+    "cicd": "CI/CD & DevOps"
+  },
+  "ciCd": {
+    "automatedDeployments": "Automated deployments on push to main",
+    "slackIntegration": "Slack integration for deployment alerts",
+    "dockerBuilds": "Docker image builds",
+    "ghcr": "Pushes to GitHub Container Registry",
+    "successFailureAlerts": "Success/failure detection",
+    "commitMetadata": "Commit metadata extraction",
+    "authorTagging": "Author tagging",
+    "richSlackBlocks": "Rich Slack Block Kit formatting"
+  },
+  "footer": {
+    "copyright": "My Portfolio App. All rights reserved."
+  }
+}

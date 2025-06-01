@@ -5,7 +5,11 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   devIndicators: false,
   images: {
-    domains: ["avatars.githubusercontent.com", "lh3.googleusercontent.com"],
+    domains: [
+      "ui-avatars.com",
+      "avatars.githubusercontent.com",
+      "lh3.googleusercontent.com",
+    ],
   },
   /*experimental: {
     serverComponentsExternalPackages: ["@aws-sdk/client-lambda"],

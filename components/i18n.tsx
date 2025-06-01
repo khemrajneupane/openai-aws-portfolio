@@ -4,23 +4,25 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
-import commonEN from "./locales/en/common.json";
-import commonFI from "./locales/fi/common.json";
-import deiplusEN from "./locales/en/deiplus.json";
-import deiplusFI from "./locales/fi/deiplus.json";
-import freedaysEN from "./locales/en/freedays.json";
-import freedaysFI from "./locales/fi/freedays.json";
-import mediatoolsEN from "./locales/en/mediatools.json";
-import mediatoolsFI from "./locales/fi/mediatools.json";
-import hotelbookingEN from "./locales/en/hotelbooking.json";
-import hotelbookingFI from "./locales/fi/hotelbooking.json";
-import familymeetupEN from "./locales/en/familymeetup.json";
-import familymeetupFI from "./locales/fi/familymeetup.json";
-import ilkkapohjalainenEN from "./locales/en/ilkkapohjalainen.json";
-import ilkkapohjalainenFI from "./locales/fi/ilkkapohjalainen.json";
+import aboutEN from "../locales/en/about.json";
+import aboutFI from "../locales/fi/about.json";
+import commonEN from "../locales/en/common.json";
+import commonFI from "../locales/fi/common.json";
+import deiplusEN from "../locales/en/deiplus.json";
+import deiplusFI from "../locales/fi/deiplus.json";
+import freedaysEN from "../locales/en/freedays.json";
+import freedaysFI from "../locales/fi/freedays.json";
+import mediatoolsEN from "../locales/en/mediatools.json";
+import mediatoolsFI from "../locales/fi/mediatools.json";
+import hotelbookingEN from "../locales/en/hotelbooking.json";
+import hotelbookingFI from "../locales/fi/hotelbooking.json";
+import familymeetupEN from "../locales/en/familymeetup.json";
+import familymeetupFI from "../locales/fi/familymeetup.json";
+import ilkkapohjalainenEN from "../locales/en/ilkkapohjalainen.json";
+import ilkkapohjalainenFI from "../locales/fi/ilkkapohjalainen.json";
 
-import librarymanagementEN from "./locales/en/librarymanagement.json";
-import librarymanagementFI from "./locales/fi/librarymanagement.json";
+import librarymanagementEN from "../locales/en/librarymanagement.json";
+import librarymanagementFI from "../locales/fi/librarymanagement.json";
 
 i18n
   .use(LanguageDetector) // Detects user's language
@@ -38,6 +40,7 @@ i18n
         librarymanagement: librarymanagementEN,
         mediatools: mediatoolsEN,
         common: commonEN,
+        about: aboutEN,
       },
       fi: {
         deiplus: deiplusFI,
@@ -48,6 +51,7 @@ i18n
         librarymanagement: librarymanagementFI,
         mediatools: mediatoolsFI,
         common: commonFI,
+        about: aboutFI,
       },
     },
     ns: [
@@ -59,6 +63,7 @@ i18n
       "librarymanagement",
       "mediatools",
       "common",
+      "about",
     ],
     defaultNS: "deiplus",
     interpolation: {
