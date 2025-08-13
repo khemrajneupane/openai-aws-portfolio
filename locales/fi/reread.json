@@ -1,0 +1,14 @@
+{
+  "reread": {
+    "heading": "re-Read Käytetyt Kirjat",
+    "description": "Käytettyjen kirjojen markkinapaikka, jossa käyttäjät voivat ostaa ja myydä käytettyjä kirjoja. Mukana ostoskori, tilausten hallinta super tyylikkäällä Admin Dashboardilla sekä maksuvaihtoehdot, ja toimii kirjautuneille käyttäjille.",
+    "features": {
+      "payment": "Stripe-integraatio Payment Intents -rajapinnan avulla turvallisiin maksutapahtumiin. Tukee korttimaksuja, <strong>Klarna</strong>, <strong>(pankkipohjaisia) maksuja</strong>, ja <strong>EUR</strong> on oletusvaluutta.",
+      "storage": "<strong>Cloudflare R2</strong> kirjojen kuvien tallennukseen ja jakamiseen, tietokanta: <strong>MongoDB</strong>",
+      "dashboard": "Tyylikäs hallintapaneeli, jossa voi hallita kirjautumisia, tilauksia, ostoskoreja, kirjoja, käyttäjiä ja asiakkaita yhdestä paikasta. Hallintapaneeli myös verkkosovelluksen käyttäjille.",
+      "integrations": "Palvelinpuolen Payment Intent -luonti Payload-koukuissa <strong>Stripe-maksupalvelun</strong> avulla, räätälöity <strong>Klarna</strong>- ja <strong>Kortti</strong>-maksuille. <strong>Stripe-webhook</strong> käsittelee ostoskorien tyhjennyksen ja tilauksen tilan päivittämisen maksun jälkeen."
+    },
+    "techstack": "<strong>Next.js 15.3 (App Router)</strong>, <strong>TypeScript</strong>, <strong>Tailwind CSS</strong>, <strong>Framer Motion</strong> animaatioihin, <strong>Lucide-react</strong> kuvakkeisiin, <strong>radix-ui/react-tooltip</strong>, <strong>Sonner</strong> toast-ilmoituksiin, <strong>React-Tooltip</strong> lisätietoja varten, <strong>Redux Toolkit</strong> ja <strong>Zustand</strong> tilanhallintaan, <strong>@stripe/react-stripe-js</strong> maksulomakkeisiin, <strong>Payload CMS v3.43</strong> backendina, <strong>NodeMailer</strong> sähköpostien lähettämiseen ja vastaanottamiseen, <strong>Stripe</strong> ja <strong>Stripe Webhooks</strong> ostoskorien, kirjojen, asiakasosoitteiden ja tilausten hallintaan, <strong>MongoDB</strong> pääasiallisena tietokantana, <strong>Cloudflare R2</strong> kuvien tallennukseen ja optimointiin, <strong>Vercel</strong> deployiin.",
+    "viewLive": "Näytä Live"
+  }
+}

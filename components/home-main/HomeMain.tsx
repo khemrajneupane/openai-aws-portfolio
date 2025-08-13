@@ -10,6 +10,7 @@ import HotelBookingCard from "@/components/app-cards/HotelBookingCard";
 import FreeDaysCard from "@/components/app-cards/FreeDaysCard";
 import { useTranslation, Trans } from "next-i18next";
 import SocketChat from "@/components/socket-chat/SocketChat";
+import ReReadCard from "@/components/app-cards/ReReadCard";
 
 export default function HomeMain() {
   const { t } = useTranslation("common");
@@ -112,6 +113,7 @@ export default function HomeMain() {
           {t("common.personal")}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <ReReadCard />
           <HotelBookingCard />
           <FamilyMeetUpCard />
           <LibraryManagementCard />

@@ -1,0 +1,14 @@
+{
+  "reread": {
+    "heading": "re-Read Used Books",
+    "description": "A second-hand book marketplace where users can buy and sell used books, complete with cart, order management with super cool Admin Dashboard and payment options,  and works for authenticated users.",
+    "features": {
+      "payment": "Stripe integration with Payment Intents API for secure transactions. Supports card payments, <strong>Klarna</strong>, <strong>(bank-based) payments</strong>, and <strong>EUR</strong> as default currency.",
+      "storage": "<strong>Cloudflare R2</strong> for storing and serving book images, db: <strong>MongoDB</strong>",
+      "dashboard": "Cool admin dashboard with authentication, order, carts, books, users, customers management from a single place. Dashboard for web app users, too.",
+      "integrations": "Server-side Payment Intent creation in Payload hooks with <strong>Stripe payment gateway</strong> tailored for <strong>Klarna</strong> and <strong>Cards</strong>. <strong>Stripe webhook</strong> handling to clear carts and update order status after payment"
+    },
+    "techstack": "<strong>Next.js 15.3 (App Router)</strong>, <strong>TypeScript</strong>, <strong>Tailwind CSS</strong>, <strong>Framer Motion</strong> for animations, <strong>Lucide-react</strong> for icons, <strong>radix-ui/react-tooltip</strong>, <strong>Sonner</strong> for toast notifications, <strong>React-Tooltip</strong> for extra information, <strong>Redux Toolkit</strong> and <strong>Zustand</strong> for state management, <strong>stripe/react-stripe-js</strong> for payment form UI, <strong>Payload CMS v3.43</strong> as backend, <strong>NodeMailer</strong> for sending/receiving emails, <strong>Stripe</strong> and <strong>Stripe Webhooks</strong> for managing carts, books, customer addresses, orders, etc., <strong>MongoDB</strong> as the main database, <strong>Cloudflare R2</strong> for image storage and optimization, <strong>Vercel</strong> for deployment.",
+    "viewLive": "View Live"
+  }
+}

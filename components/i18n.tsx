@@ -2,10 +2,11 @@
 "use client";
 
 import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
 import aboutEN from "../locales/en/about.json";
 import aboutFI from "../locales/fi/about.json";
+import { initReactI18next } from "react-i18next";
+import rereadEN from "../locales/en/reread.json";
+import rereadFI from "../locales/fi/reread.json";
 import commonEN from "../locales/en/common.json";
 import commonFI from "../locales/fi/common.json";
 import deiplusEN from "../locales/en/deiplus.json";
@@ -18,9 +19,9 @@ import hotelbookingEN from "../locales/en/hotelbooking.json";
 import hotelbookingFI from "../locales/fi/hotelbooking.json";
 import familymeetupEN from "../locales/en/familymeetup.json";
 import familymeetupFI from "../locales/fi/familymeetup.json";
+import LanguageDetector from "i18next-browser-languagedetector";
 import ilkkapohjalainenEN from "../locales/en/ilkkapohjalainen.json";
 import ilkkapohjalainenFI from "../locales/fi/ilkkapohjalainen.json";
-
 import librarymanagementEN from "../locales/en/librarymanagement.json";
 import librarymanagementFI from "../locales/fi/librarymanagement.json";
 
@@ -41,6 +42,7 @@ i18n
         mediatools: mediatoolsEN,
         common: commonEN,
         about: aboutEN,
+        reread: rereadEN,
       },
       fi: {
         deiplus: deiplusFI,
@@ -52,6 +54,7 @@ i18n
         mediatools: mediatoolsFI,
         common: commonFI,
         about: aboutFI,
+        reread: rereadFI,
       },
     },
     ns: [
@@ -64,6 +67,7 @@ i18n
       "mediatools",
       "common",
       "about",
+      "reread",
     ],
     defaultNS: "deiplus",
     interpolation: {
