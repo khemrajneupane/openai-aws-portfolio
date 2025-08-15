@@ -4,3 +4,6 @@
   flex-direction: column;
   gap: 1rem;
 }
+body {
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+}

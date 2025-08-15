@@ -21,7 +21,10 @@ export default function UserAvatar({ user }: { user: User }) {
   }
 
   return user?.image ? (
-    <Link href="profile">
+    <Link
+      href="profile"
+      className="bg-blue-700/80  text-white text-xl hover:bg-blue-700/80 ring-1 rounded-md p-1"
+    >
       <Image
         src={user?.image}
         alt={user?.name}
@@ -31,8 +34,8 @@ export default function UserAvatar({ user }: { user: User }) {
       />
     </Link>
   ) : (
-    <Link href="/profile" className="flex items-center justify-center">
-      <div className="w-6 h-6 rounded-full bg-gray-700 flex items-center justify-center text-xs font-semibold">
+    <Link href="/profile" className="p-1 flex items-center justify-center">
+      <div className="p-2 w-11 text-white text-xl  hover:bg-blue-700/80 ring-1  ring-amber-50 rounded-full">
         {getInitials(user?.name)}
       </div>
     </Link>

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+//import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import { GlobalProvider } from "./GlobalProvider";
 import Script from "next/script";
 import OpenAiChatWindow from "@/components/openAI/OpenAiChatWindow";
 
-const inter = Inter({ subsets: ["latin"] });
+//const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Portfolio | Khem Raj Neupane",
@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gray-50`}>
+      <body className={``}>
         <GlobalProvider>
           <div className="header-children-spacing">
             <Header />

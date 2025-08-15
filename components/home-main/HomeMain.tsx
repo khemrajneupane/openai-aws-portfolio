@@ -15,8 +15,8 @@ import ReReadCard from "@/components/app-cards/ReReadCard";
 export default function HomeMain() {
   const { t } = useTranslation("common");
   return (
-    <div className="space-y-12">
-      <section className="text-center py-16 px-4 bg-gradient-to-br from-white via-purple-50 to-purple-100 rounded-3xl shadow-amber-900">
+    <div className="space-y-12 p-1 flex flex-col">
+      <section className="text-center py-16 px-4 mt-40 bg-gradient-to-br from-white via-purple-50 to-purple-100 rounded-3xl shadow-amber-900">
         <h1 className="text-5xl font-extrabold text-aws-dark mb-6 tracking-tight drop-shadow-sm">
           <span className="inline-flex items-center gap-2">
             <UserCheck className="w-8 h-8 text-purple-600 animate-pulse" />
