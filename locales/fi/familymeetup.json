@@ -1,16 +1,13 @@
 {
-  "title": "Perhehuvi",
-  "description": "Digitaalinen perhealbumi avoimella ja käyttäjiä osallistavalla chatilla, tehty <1>Next.js</1>:llä, <3>Pythonilla</3>, <5>Flaskilla</5>, <7>Socket.IO:lla</7>, <9>OpenAI:lla</9>.",
+  "title": "Nepal Election 2025",
+  "description": "Turvallinen ja moderni reaaliaikainen vaalialusta, rakennettu käyttäen <1>Next.js</1>, <3>MongoDB</3>, <5>TypeScript</5>, <7>TailwindCSS</7> ja Nepalille suunnattuja uutisintegrointeja.",
   "features": {
-    "gallery": "Interaktiivinen kuvanäkymä react-image-galleryn avulla",
-    "upload": "Lataus tiedostovalitsimen tai raahaus ja pudotus -toiminnon avulla",
-    "auth": "Vain kirjautuneet käyttäjät voivat ladata tai poistaa kuvia",
-    "cloudinary": "Kuvat tallennetaan Cloudinaryyn ja linkitetään käyttäjiin",
-    "formatSupport": "Tukee JPEG/PNG-formaatteja, maksimikoko 5MB",
-    "notifications": "Reaaliaikaiset virhe- ja onnistumisilmoitukset react-hot-toastilla",
-    "nextauth": "NextAuth.js CredentialsProviderin ja GoogleProviderin kanssa",
-    "session": "Käyttäjäistunto vaaditaan kuvien lataamiseen ja AI-chatille",
-    "chat": "OpenAI- ja Socket.IO-chatin toteutus"
+    "secureVoting": "Yksi henkilö = yksi ääni -järjestelmä UUID-, IP- ja user-agent-sormenjälkitekniikalla sekä salattu äänien tallennus MongoDB:hen.",
+    "backendProtection": "API-reitit rajoitetulla kutsumäärällä, kaksoisäänestysten estäminen ja turvallinen Next.js-palvelinlogiikka äänten käsittelyyn.",
+    "realTimeResults": "Välittömästi päivittyvät tulokset nopeilla tietokantahaulla ja optimoiduilla uudelleenrenderöinneillä Next.js App Router -arkkitehtuurissa.",
+    "newsAggregation": "RSS-pohjainen vaaliuutisten kerääjä, joka sisältää koko sisällön, kirjoittajan, aikaleimat, kuvien poiminnan ja siistin esitystavan.",
+    "modernStack": "Rakennettu Next.js 15:lla, Reactilla, TypeScriptillä, TailwindCSS:llä ja MongoDB/Mongoose-ratkaisulla skaalautuvaa ja ylläpidettävää arkkitehtuuria varten.",
+    "performanceDeployment": "Responsiivinen mobiiliystävällinen käyttöliittymä, optimoidut kuvat, kevyet bundlet sekä Vercel-julkaisu ISR- ja välimuistitukien avulla."
   },
-  "viewLive": "Näytä liveversio"
+  "viewLive": "Katso Live"
 }

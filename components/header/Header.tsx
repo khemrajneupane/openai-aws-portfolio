@@ -25,7 +25,6 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log("scrolled", window.pageYOffset);
       if (window.pageYOffset > 89) {
         setScrolled(true);
       } else {

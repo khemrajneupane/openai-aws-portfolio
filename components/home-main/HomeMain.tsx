@@ -11,6 +11,7 @@ import FreeDaysCard from "@/components/app-cards/FreeDaysCard";
 import { useTranslation, Trans } from "next-i18next";
 import SocketChat from "@/components/socket-chat/SocketChat";
 import ReReadCard from "@/components/app-cards/ReReadCard";
+import RagPipeline from "../rag-pipeline/RagPipeline";
 
 export default function HomeMain() {
   const { t } = useTranslation("common");
@@ -77,12 +78,12 @@ export default function HomeMain() {
             <div className="text-center text-gray-800">
               <p className="flex items-center justify-center gap-2">
                 <Code className="w-5 h-5 text-aws-orange" />
-                React.js, Next.js, TypeScript, Node.js, Express.js, TailwindCSS,
-                Python, Flask
+                ReactJS, NextJS, TypeScript, NodeJS, ExpressJS, TailwindCSS,
+                Python, LLM, LangChain, AI-Agent, OpenAI, RAG Pipeline.
               </p>
               <p className="flex items-center justify-center gap-2">
                 <Database className="w-5 h-5 text-aws-orange" />
-                MongoDB, MariaDB, DynamoDB, OpenAI, Socket.IO
+                MongoDB, MariaDB, DynamoDB, Pinecone Vector DB, Socket.IO
               </p>
               <p className="flex items-center justify-center gap-2">
                 <Layers className="w-5 h-5 text-aws-blue" />
@@ -120,6 +121,9 @@ export default function HomeMain() {
           <FreeDaysCard />
           <SocketChat />
         </div>
+      </section>
+      <section>
+        <RagPipeline />
       </section>
 
       {/* <section id="chat" className="py-8">

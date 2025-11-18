@@ -1,16 +1,12 @@
 {
-  "title": "Family Fun",
-  "description": "A digital family album with open and users engaged chat, done in <1>Next.js</1>, <3>Python</3>, <5>Flask</5>, <7>Socket.IO</7>, <9>OpenAI</9>.",
+  "title": "Nepal Election 2025",
+  "description": "A secure, modern, real-time election platform built with <1>Next.js</1>, <1>MongoDB</1>, <1>TypeScript</1>, <1>TailwindCSS</1>, and live news integrations focused on Nepal’s upcoming election.",
   "features": {
-    "gallery": "Interactive image viewing using react-image-gallery",
-    "upload": "Upload via file picker or drag-and-drop",
-    "auth": "Only logged-in users can upload/delete photos",
-    "cloudinary": "Images stored in Cloudinary & linked to users",
-    "formatSupport": "Supports JPEG/PNG, max size 5MB",
-    "notifications": "Real-time error/success notifications with react-hot-toast",
-    "nextauth": "NextAuth.js with CredentialsProvider & GoogleProvider",
-    "session": "User session required for uploads and AI chat",
-    "chat": "OpenAI chat and Socket.IO chat implementation"
+    "secureVoting": "One-person-one-vote system using UUID, IP, and user-agent fingerprinting with encrypted vote storage in MongoDB.",
+    "backendProtection": "Rate-limited API routes, anti-duplicate vote validation, and secure Next.js server-side logic for vote submission.",
+    "realTimeResults": "Instant, live-updating results with fast database reads and optimized re-rendering using React and Next.js App Router.",
+    "newsAggregation": "RSS-powered election news collector with full content, author, timestamps, image extraction, and clean formatted display.",
+    "performanceDeployment": "Responsive mobile-friendly UI, optimized images, lightweight bundles, and Vercel deployment with ISR and caching."
   },
   "viewLive": "View Live"
 }

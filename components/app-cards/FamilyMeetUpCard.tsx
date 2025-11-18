@@ -41,39 +41,23 @@ export default function FamilyMeetUpCard() {
           <ul className="text-sm text-gray-600 mb-4 space-y-2">
             <li className="flex items-start gap-2">
               <ImagePlus className="w-4 h-4 text-aws-blue mt-1" />
-              {t("features.gallery")}
+              {t("features.secureVoting")}
             </li>
             <li className="flex items-start gap-2">
               <Upload className="w-4 h-4 text-aws-orange mt-1" />
-              {t("features.upload")}
+              {t("features.backendProtection")}
             </li>
             <li className="flex items-start gap-2">
               <UserCheck className="w-4 h-4 text-aws-dark mt-1" />
-              {t("features.auth")}
+              {t("features.realTimeResults")}
             </li>
             <li className="flex items-start gap-2">
               <FileImage className="w-4 h-4 text-purple-700 mt-1" />
-              {t("features.cloudinary")}
-            </li>
-            <li className="flex items-start gap-2">
-              <ShieldCheck className="w-4 h-4 text-green-600 mt-1" />
-              {t("features.formatSupport")}
+              {t("features.newsAggregation")}
             </li>
             <li className="flex items-start gap-2">
               <AlertCircle className="w-4 h-4 text-yellow-500 mt-1" />
-              {t("features.notifications")}
-            </li>
-            <li className="flex items-start gap-2">
-              <UserCheck className="w-4 h-4 text-aws-blue mt-1" />
-              {t("features.nextauth")}
-            </li>
-            <li className="flex items-start gap-2">
-              <ShieldCheck className="w-4 h-4 text-aws-dark mt-1" />
-              {t("features.session")}
-            </li>
-            <li className="flex items-start gap-2">
-              <Sparkles className="w-4 h-4 text-pink-600 mt-1" />
-              {t("features.chat")}
+              {t("features.performanceDeployment")}
             </li>
           </ul>
         </div>
@@ -81,7 +65,7 @@ export default function FamilyMeetUpCard() {
         {/* Footer */}
         <div className="pt-4">
           <a
-            href="https://pariwar-hamro.vercel.app/"
+            href="https://www.votenepal.net/"
             className="inline-flex items-center gap-1 text-sm font-medium text-aws-blue hover:underline"
             target="_blank"
             rel="noopener noreferrer"
