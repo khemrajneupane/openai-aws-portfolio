@@ -5,8 +5,6 @@ import {
   UserCheck,
   FileImage,
   AlertCircle,
-  ShieldCheck,
-  Sparkles,
   ExternalLink,
 } from "lucide-react";
 import { useTranslation, Trans } from "next-i18next";

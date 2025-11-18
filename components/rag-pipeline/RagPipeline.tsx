@@ -141,7 +141,7 @@ export default function RAGDashboard() {
           throw new Error(`Delete failed: ${res.status}`);
         }
 
-        const data = await res.json();
+        await res.json();
 
         alert("Index deleted successfully.");
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
