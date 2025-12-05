@@ -16,7 +16,7 @@ const Header = () => {
     router.push("/login");
   };
   const user = {
-    _id: data?.user?._id as string,
+    _id: (data?.user?._id?.toString() || "") as string,
     name: data?.user?.name || "",
     email: data?.user?.email || "",
     image: data?.user?.image || undefined,
