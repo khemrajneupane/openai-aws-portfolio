@@ -50,11 +50,7 @@ export default function RAGDashboard() {
 
         const data = await res.json();
 
-        alert(
-          `PDF uploaded successfully! Created ${
-            data.chunks_created || "unknown"
-          } chunks.`
-        );
+        alert(`PDF uploaded successfully!`);
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (err: any) {
         console.error("Upload error:", err);
@@ -166,7 +162,9 @@ export default function RAGDashboard() {
         <p className="text-center text-gray-600">
           LLM is prompted to answer based on domain specific knowledge. You can
           upload your own document and try to ask questions based on that.
-          Currently, only PDF is supported!
+          Currently, only PDF is supported! Please, bear in mind that the upload
+          and response from AI may take a few moments as I am using free-tier
+          services.
         </p>
 
         {/* Error Display */}
@@ -212,7 +210,7 @@ export default function RAGDashboard() {
               setQuestion(e.target.value);
               setError(null);
             }}
-            placeholder="Type your question about the document..."
+            placeholder="Type your question, e.g., summarize the document in a short paragraph."
             className="w-full border rounded-md p-3 h-24"
             onKeyPress={(e) => {
               if (e.key === "Enter" && !e.shiftKey) {
