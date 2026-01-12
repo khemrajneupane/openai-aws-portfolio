@@ -60,7 +60,7 @@ export default function FreeDaysCard() {
 
         <div className="pt-4">
           <a
-            href="https://hamro-pariwar.vercel.app/"
+            href="https://free-day.netlify.app/"
             className="inline-flex items-center gap-1 text-sm font-medium text-aws-blue hover:underline"
             target="_blank"
             rel="noopener noreferrer"

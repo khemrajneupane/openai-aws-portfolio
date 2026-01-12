@@ -58,7 +58,7 @@ export default function HotelBookingCard() {
 
         <div className="pt-4">
           <a
-            href="https://hotel-booking-khem.vercel.app/"
+            href="https://khem-room-book.netlify.app/"
             className="inline-flex items-center gap-1 text-sm font-medium text-aws-blue hover:underline"
             target="_blank"
             rel="noopener noreferrer"

@@ -63,7 +63,7 @@ export default function FamilyMeetUpCard() {
         {/* Footer */}
         <div className="pt-4">
           <a
-            href="https://www.votenepal.net/"
+            href="https://votenepal.netlify.app/"
             className="inline-flex items-center gap-1 text-sm font-medium text-aws-blue hover:underline"
             target="_blank"
             rel="noopener noreferrer"
