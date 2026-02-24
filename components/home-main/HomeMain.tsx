@@ -12,6 +12,7 @@ import { useTranslation, Trans } from "next-i18next";
 import SocketChat from "@/components/socket-chat/SocketChat";
 import ReReadCard from "@/components/app-cards/ReReadCard";
 import RagPipeline from "../rag-pipeline/RagPipeline";
+import HfPoem from "../hf-poem-ui/HfPoem";
 
 export default function HomeMain() {
   const { t } = useTranslation("common");
@@ -121,6 +122,9 @@ export default function HomeMain() {
           <SocketChat />
           <LibraryManagementCard />
         </div>
+      </section>
+      <section>
+        <HfPoem />
       </section>
       <section>
         <RagPipeline />
