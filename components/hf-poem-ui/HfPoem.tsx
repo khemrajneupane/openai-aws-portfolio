@@ -1,23 +1,41 @@
 "use client";
 import { useState } from "react";
+import { Client } from "@gradio/client";
 
 export default function PoemPage() {
   const [input, setInput] = useState("");
   const [reply, setReply] = useState("");
   const [loading, setLoading] = useState(false);
 
+  // async function send() {
+  //   setLoading(true);
+
+  //   const res = await fetch("/api/auth/hf-poem", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({ message: input }),
+  //   });
+
+  //   const data = await res.json();
+  //   setReply(data.reply);
+  //   setLoading(false);
+  // }
   async function send() {
     setLoading(true);
 
-    const res = await fetch("/api/auth/hf-poem", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: input }),
-    });
+    try {
+      const client = await Client.connect("khemn/poetic-assistant-space");
 
-    const data = await res.json();
-    setReply(data.reply);
-    setLoading(false);
+      const result = await client.predict("/generate_poem", {
+        message: input,
+      });
+
+      setReply(result.data as string);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
