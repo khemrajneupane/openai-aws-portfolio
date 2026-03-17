@@ -8,5 +8,5 @@
     "newsAggregation": "RSS-powered election news collector with full content, author, timestamps, image extraction, and clean formatted display.",
     "performanceDeployment": "Responsive mobile-friendly UI, optimized images, lightweight bundles, and Vercel deployment with ISR and caching."
   },
-  "viewLive": "View Live"
+  "viewLive": "Preview"
 }

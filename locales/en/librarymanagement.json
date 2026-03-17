@@ -1,15 +1,12 @@
 {
-  "title": "Library Management System",
-  "description": "A CRUD full stack application for library book loan management, done with Bootstrap, CSS, HTML, Express.js, Material-UI, MongoDB, Node.js, React.js, Redux, TypeScript. Users can sign up, login, loan books or return books. Admins can update, add, delete books.",
-  "auth": "User authentication with login/signup",
-  "borrow": "Borrow and return books functionality",
-  "add": "Admins can add new books",
-  "edit": "Admins can edit book records",
-  "delete": "Admins can delete books",
-  "react": "Built with React.js and Redux",
-  "mongo": "MongoDB for backend storage",
-  "typescript": "TypeScript for type safety and maintainability",
-  "ui": "Styled with Bootstrap, Material-UI, and CSS",
-  "express": "Express.js + Node.js backend API",
-  "link": "View Live"
+  "title": "Sprout & Swap",
+  "description": "Full-stack Next.js 14 App Router experience for managed kids’ clothing resale: parents drop off clothes, warehouse inspects/listed items, buyers purchase, and sellers are paid via Stripe while the platform orchestrates everything.",
+  "auth": "Next.js 14 + TypeScript + TailwindCSS for responsive UI and layout components. NextAuth v4 with CredentialsProvider for buyer/seller/admin login plus role-aware session guards",
+  "sell": "Seller landing page + bag submission workflow so parents can ship clothing for intake",
+  "dashboard": "Buyer or seller dashboards for profiles, orders, and future payouts",
+  "payments": "Stripe checkout for buyers and seller payout tracking",
+  "inventory": "MongoDB + Mongoose models (InventoryItem, Product, Order, OrderItem, Payout) capture the lifecycle",
+  "media": "Cloudinary handles clothing photography and image delivery",
+  "backend": "Next.js API routes/middleware with MongoDB connection helpers and centralized auth",
+  "link": "Preview"
 }

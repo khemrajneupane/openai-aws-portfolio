@@ -9,5 +9,5 @@
     "modernStack": "Rakennettu Next.js 15:lla, Reactilla, TypeScriptillä, TailwindCSS:llä ja MongoDB/Mongoose-ratkaisulla skaalautuvaa ja ylläpidettävää arkkitehtuuria varten.",
     "performanceDeployment": "Responsiivinen mobiiliystävällinen käyttöliittymä, optimoidut kuvat, kevyet bundlet sekä Vercel-julkaisu ISR- ja välimuistitukien avulla."
   },
-  "viewLive": "Katso Live"
+  "viewLive": "Esikatselu"
 }

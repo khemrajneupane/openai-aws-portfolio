@@ -9,5 +9,5 @@
     "tailwind": "Tailwind CSS for responsive UI",
     "typescript": "TypeScript for type safety"
   },
-  "viewLive": "View Live"
+  "viewLive": "Preview"
 }

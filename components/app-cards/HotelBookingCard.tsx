@@ -18,7 +18,7 @@ export default function HotelBookingCard() {
   return (
     <div className="bg-white border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
       <div className="bg-[#4e225d] px-4 py-3 flex items-center gap-2 border rounded-t">
-        <Hotel className="text-white w-5 h-5" />
+        <Hotel className="text-blue-700 w-5 h-5" />
         <h3 className="text-lg font-semibold text-white transition-colors duration-200">
           {t("title")}
         </h3>

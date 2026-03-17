@@ -6,6 +6,7 @@ import {
   FileImage,
   AlertCircle,
   ExternalLink,
+  VoteIcon,
 } from "lucide-react";
 import { useTranslation, Trans } from "next-i18next";
 export default function FamilyMeetUpCard() {
@@ -13,8 +14,8 @@ export default function FamilyMeetUpCard() {
   return (
     <div className="bg-white border border-aws-blue shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full rounded-t">
       <div className="bg-[#4e225d] px-4 py-3 flex items-center gap-2 border">
-        <ImagePlus className="text-white w-5 h-5" />
-        <h3 className="text-lg font-semibold text-white hover:text-[#9d50bb] transition-colors duration-200">
+        <VoteIcon className="text-white w-8 h-8" />
+        <h3 className="text-lg font-semibold text-white transition-colors duration-200">
           {t("title")}
         </h3>
       </div>
@@ -38,23 +39,23 @@ export default function FamilyMeetUpCard() {
           </p>
           <ul className="text-sm text-gray-600 mb-4 space-y-2">
             <li className="flex items-start gap-2">
-              <ImagePlus className="w-4 h-4 text-aws-blue mt-1" />
+              <ImagePlus size={30} className="text-aws-blue mt-1" />
               {t("features.secureVoting")}
             </li>
             <li className="flex items-start gap-2">
-              <Upload className="w-4 h-4 text-aws-orange mt-1" />
+              <Upload size={30} className="text-aws-orange mt-1" />
               {t("features.backendProtection")}
             </li>
             <li className="flex items-start gap-2">
-              <UserCheck className="w-4 h-4 text-aws-dark mt-1" />
+              <UserCheck size={30} className="text-aws-dark mt-1" />
               {t("features.realTimeResults")}
             </li>
             <li className="flex items-start gap-2">
-              <FileImage className="w-4 h-4 text-purple-700 mt-1" />
+              <FileImage size={30} className="text-purple-700 mt-1" />
               {t("features.newsAggregation")}
             </li>
             <li className="flex items-start gap-2">
-              <AlertCircle className="w-4 h-4 text-yellow-500 mt-1" />
+              <AlertCircle size={30} className="text-yellow-500 mt-1" />
               {t("features.performanceDeployment")}
             </li>
           </ul>

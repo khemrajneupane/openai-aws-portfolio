@@ -7,6 +7,7 @@ import {
   Users,
   CheckCircle,
   LogIn,
+  Calendar,
 } from "lucide-react";
 import { useTranslation, Trans } from "next-i18next";
 
@@ -16,7 +17,7 @@ export default function FreeDaysCard() {
   return (
     <div className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
       <div className="bg-[#4e225d] px-4 py-3 flex items-center gap-2 border rounded-t">
-        <Radio className="text-white w-5 h-5" />
+        <Calendar className="text-yellow-500 w-6 h-6" />
         <h3 className="text-lg font-semibold text-white transition-colors duration-200">
           {t("freedays.title")}
         </h3>

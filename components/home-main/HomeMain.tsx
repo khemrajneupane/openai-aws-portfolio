@@ -2,7 +2,7 @@
 import DeiplusCard from "@/components/app-cards/DeiplusCard";
 import IlkkaPohjalainenCard from "@/components/app-cards/IlkkapohjalainenCard";
 import MediaToolsCard from "@/components/app-cards/MediaToolsCard";
-import LibraryManagementCard from "@/components/app-cards/LibraryManagementCard";
+import LibraryManagementCard from "@/components/app-cards/SproutSwapCard";
 import { motion } from "framer-motion";
 import { Cloud, Code, Database, Layers, UserCheck } from "lucide-react";
 import FamilyMeetUpCard from "@/components/app-cards/FamilyMeetUpCard";
@@ -13,6 +13,7 @@ import SocketChat from "@/components/socket-chat/SocketChat";
 import ReReadCard from "@/components/app-cards/ReReadCard";
 import RagPipeline from "../rag-pipeline/RagPipeline";
 import HfPoem from "../hf-poem-ui/HfPoem";
+import SproutSwapCard from "@/components/app-cards/SproutSwapCard";
 
 export default function HomeMain() {
   const { t } = useTranslation("common");
@@ -103,10 +104,9 @@ export default function HomeMain() {
         <h2 className="text-3xl font-bold text-aws-dark mb-8 text-center">
           {t("common.client")}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 gap-6">
           <IlkkaPohjalainenCard />
           <DeiplusCard />
-          <MediaToolsCard />
         </div>
       </section>
 
@@ -115,12 +115,14 @@ export default function HomeMain() {
           {t("common.personal")}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <SproutSwapCard />
           <ReReadCard />
-          <FamilyMeetUpCard />
+
           <HotelBookingCard />
-          <FreeDaysCard />
+
+          <FamilyMeetUpCard />
           <SocketChat />
-          <LibraryManagementCard />
+          <FreeDaysCard />
         </div>
       </section>
       <section>

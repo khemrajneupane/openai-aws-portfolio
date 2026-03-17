@@ -9,6 +9,6 @@
       "integrations": "Server-side Payment Intent creation in Payload hooks with <strong>Stripe payment gateway</strong> tailored for <strong>Klarna</strong> and <strong>Cards</strong>. <strong>Stripe webhook</strong> handling to clear carts and update order status after payment"
     },
     "techstack": "<strong>Next.js 15.3 (App Router)</strong>, <strong>TypeScript</strong>, <strong>Tailwind CSS</strong>, <strong>Framer Motion</strong> for animations, <strong>Lucide-react</strong> for icons, <strong>radix-ui/react-tooltip</strong>, <strong>Sonner</strong> for toast notifications, <strong>React-Tooltip</strong> for extra information, <strong>Redux Toolkit</strong> and <strong>Zustand</strong> for state management, <strong>stripe/react-stripe-js</strong> for payment form UI, <strong>Payload CMS v3.43</strong> as backend, <strong>NodeMailer</strong> for sending/receiving emails, <strong>Stripe</strong> and <strong>Stripe Webhooks</strong> for managing carts, books, customer addresses, orders, etc., <strong>MongoDB</strong> as the main database, <strong>Cloudflare R2</strong> for image storage and optimization, <strong>Vercel</strong> for deployment.",
-    "viewLive": "View Live"
+    "viewLive": "Preview"
   }
 }

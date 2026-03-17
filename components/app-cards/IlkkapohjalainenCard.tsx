@@ -28,7 +28,7 @@ export default function IlkkaPohjalainenCard() {
         <div className="space-y-3 text-sm text-gray-700">
           <p>
             <Trans
-              i18nKey="description"
+              i18nKey="ilkkapohjalainen.description"
               t={t}
               components={{ strong: <strong className="text-gray-900" /> }}
             />
@@ -60,7 +60,8 @@ export default function IlkkaPohjalainenCard() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            {t("viewLive")} <ExternalLink className="w-4 h-4" />
+            {t("ilkkapohjalainen.viewLive")}{" "}
+            <ExternalLink className="w-4 h-4" />
           </a>
         </div>
       </div>

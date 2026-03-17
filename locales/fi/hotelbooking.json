@@ -9,5 +9,5 @@
     "tailwind": "Tailwind CSS responsiiviseen käyttöliittymään",
     "typescript": "TypeScript tyyppiturvallisuuteen"
   },
-  "viewLive": "Katso Live"
+  "viewLive": "Esikatselu"
 }

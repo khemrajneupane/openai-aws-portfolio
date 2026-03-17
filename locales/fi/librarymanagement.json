@@ -1,15 +1,12 @@
 {
-  "title": "Kirjaston hallintajärjestelmä",
-  "description": "CRUD-kokonaisratkaisu kirjalainojen hallintaan, tehty käyttäen Bootstrapia, CSS:ää, HTML:ää, Express.js:ää, Material-UI:ta, MongoDB:tä, Node.js:ää, React.js:ää, Reduxia ja TypeScriptiä. Käyttäjät voivat rekisteröityä, kirjautua sisään, lainata ja palauttaa kirjoja. Ylläpitäjät voivat päivittää, lisätä ja poistaa kirjoja.",
-  "auth": "Käyttäjien tunnistautuminen ja kirjautuminen",
-  "borrow": "Lainaa ja palauta kirjoja -toiminto",
-  "add": "Ylläpitäjät voivat lisätä uusia kirjoja",
-  "edit": "Ylläpitäjät voivat muokata kirjojen tietoja",
-  "delete": "Ylläpitäjät voivat poistaa kirjoja",
-  "react": "Rakennettu React.js:llä ja Reduxilla",
-  "mongo": "MongoDB taustatallennukseen",
-  "typescript": "TypeScript tyyppiturvallisuuteen ja ylläpidettävyyteen",
-  "ui": "Tyylitelty Bootstrapilla, Material-UI:lla ja CSS:llä",
-  "express": "Express.js + Node.js tausta-API",
-  "link": "Katso Live"
+  "title": "Sprout & Swap",
+  "description": "Täyden pinon Next.js 14 App Router -kokemus hallittuun lastenvaatteiden jälleenmyyntiin: vanhemmat tuovat vaatteet, varasto tarkistaa ja listaa tuotteet, ostajat tekevät ostoksia ja myyjille maksetaan Stripen kautta samalla kun alusta hallinnoi koko prosessia.",
+  "auth": "Next.js 14 + TypeScript + TailwindCSS responsiiviseen käyttöliittymään ja layout-komponentteihin. NextAuth v4 CredentialsProviderilla ostaja/myyjä/admin-kirjautumiseen sekä roolipohjaiset istunnon suojaukset",
+  "sell": "Myyjän aloitussivu + lähetysprosessi, jonka avulla vanhemmat voivat lähettää vaatteita käsittelyyn",
+  "dashboard": "Ostajan tai myyjän hallintapaneelit profiileille, tilauksille ja tuleville maksuille",
+  "payments": "Stripe-maksaminen ostajille ja myyjien maksujen seuranta",
+  "inventory": "MongoDB + Mongoose -mallit (InventoryItem, Product, Order, OrderItem, Payout) kuvaavat koko elinkaaren",
+  "media": "Cloudinary hoitaa vaatteiden kuvauksen ja kuvien jakelun",
+  "backend": "Next.js API -reitit ja middleware MongoDB-yhteyksillä sekä keskitetty autentikointi",
+  "link": "Esikatselu"
 }
