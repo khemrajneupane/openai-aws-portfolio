@@ -14,9 +14,8 @@ export default function RAGDashboard() {
   const { data } = useSession();
 
   //const API_BASE = "https://rag-pipeline-langchain.onrender.com";
-  const API_BASE = process.env.NEXT_PUBLIC_API_URL;
-  //const API_BASE = process.env.NEXT_PUBLIC_API_URL;
-  const API_KEY = process.env.NEXT_PUBLIC_API_KEY_PROTECTION || "";
+  const API_BASE = process.env.NEXT_PUBLIC_API_URL!;
+  const API_KEY = process.env.NEXT_PUBLIC_API_KEY_PROTECTION ?? "";
 
   // ----------------------------
   // Upload new PDF
@@ -79,15 +78,18 @@ export default function RAGDashboard() {
     try {
       console.log("Sending question:", question); // Debug log
 
-      const res = await fetch(`${API_BASE}/ask`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          "X-API-Key": API_KEY,
+      const res = await fetch(
+        `https://rag-pipeline-langchain.onrender.com/ask`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            "X-API-Key": API_KEY,
+          },
+          body: JSON.stringify({ query: question }),
         },
-        body: JSON.stringify({ query: question }),
-      });
+      );
 
       console.log("Response status:", res.status); // Debug log
 
@@ -105,12 +107,10 @@ export default function RAGDashboard() {
       }
 
       setAnswer(data.answer);
-
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       console.error("Ask question error:", err);
       setError(
-        err.message || "Error asking question. Check console for details."
+        err.message || "Error asking question. Check console for details.",
       );
       setAnswer("");
     } finally {
@@ -140,7 +140,6 @@ export default function RAGDashboard() {
         await res.json();
 
         alert("Index deleted successfully.");
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (err: any) {
         console.error("Delete error:", err);
         setError(err.message || "Failed to delete index.");

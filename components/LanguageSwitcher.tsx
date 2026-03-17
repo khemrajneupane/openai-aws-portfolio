@@ -15,6 +15,8 @@ export default function LanguageSwitcher({
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
+    // Safe client-only hydration, suppress lint warning
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setHydrated(true);
   }, []);
 
@@ -22,9 +24,9 @@ export default function LanguageSwitcher({
     i18nInstance.changeLanguage(lng);
   };
 
-  if (!hydrated) return null; // or render a loading state
+  if (!hydrated) return null; // Prevent SSR mismatch
   return (
-    <div className={`relative flex gap-3  ${customClass}`}>
+    <div className={`relative flex gap-3 ${customClass}`}>
       <Languages size={14} />
       <button
         onClick={() => changeLanguage("en")}

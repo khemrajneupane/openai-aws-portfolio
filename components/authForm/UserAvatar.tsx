@@ -27,7 +27,7 @@ export default function UserAvatar({ user }: { user: User }) {
     >
       <Image
         src={user?.image}
-        alt={user?.name}
+        alt={user?.name || "user avatar"}
         width={50}
         height={50}
         className="rounded-full"

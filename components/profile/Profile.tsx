@@ -40,7 +40,7 @@ const Profile = () => {
               data?.user?.image ||
               "https://ui-avatars.com/api/?name=Developer+Tester"
             }
-            alt={user.name}
+            alt={user?.name || "user avatar"}
             width={50}
             height={50}
             className="rounded-full"
