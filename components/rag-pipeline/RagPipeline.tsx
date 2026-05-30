@@ -1,7 +1,7 @@
 "use client";
 
 import { useSession } from "next-auth/react";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 export default function RAGDashboard() {
   const [file, setFile] = useState<File | null>(null);
@@ -11,7 +11,35 @@ export default function RAGDashboard() {
   const [uploading, setUploading] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [uploadStage, setUploadStage] = useState(0);
+  const [elapsedTime, setElapsedTime] = useState(0);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const { data } = useSession();
+
+  const UPLOAD_STAGES = [
+    "Uploading PDF to server...",
+    "Extracting & chunking document into segments...",
+    "Generating embeddings via Google AI (free tier: ~0.7s per chunk)...",
+    "Indexing vectors into Pinecone...",
+  ];
+
+  useEffect(() => {
+    if (!uploading) {
+      setUploadStage(0);
+      setElapsedTime(0);
+      return;
+    }
+    const timer = setInterval(() => setElapsedTime((t) => t + 1), 1000);
+    const s1 = setTimeout(() => setUploadStage(1), 2000);
+    const s2 = setTimeout(() => setUploadStage(2), 5000);
+    const s3 = setTimeout(() => setUploadStage(3), 8000);
+    return () => {
+      clearInterval(timer);
+      clearTimeout(s1);
+      clearTimeout(s2);
+      clearTimeout(s3);
+    };
+  }, [uploading]);
 
   //const API_BASE = "https://rag-pipeline-langchain.onrender.com";
   const API_BASE = process.env.NEXT_PUBLIC_API_URL!;
@@ -23,7 +51,7 @@ export default function RAGDashboard() {
   async function handleUpload() {
     if (data?.user?.email) {
       if (!file) {
-        setError("Please select a PDF first.");
+        fileInputRef.current?.click();
         return;
       }
 
@@ -78,9 +106,7 @@ export default function RAGDashboard() {
     try {
       console.log("Sending question:", question); // Debug log
 
-      const res = await fetch(
-        `https://rag-pipeline-langchain.onrender.com/ask`,
-        {
+      const res = await fetch(`${API_BASE}/ask`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -180,6 +206,7 @@ export default function RAGDashboard() {
 
           <div className="flex flex-col sm:flex-row gap-4 items-center">
             <input
+              ref={fileInputRef}
               type="file"
               accept="application/pdf"
               onChange={(e) => {
@@ -187,16 +214,42 @@ export default function RAGDashboard() {
                 setError(null);
               }}
               className="w-full border rounded-md p-2"
+              disabled={uploading}
             />
 
             <button
               onClick={handleUpload}
-              disabled={uploading || !file}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition disabled:opacity-60 disabled:cursor-not-allowed"
+              disabled={uploading}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer whitespace-nowrap"
             >
-              {uploading ? "Uploading..." : "Upload & Process"}
+              {uploading ? "Processing..." : file ? "Upload & Process" : "Choose PDF"}
             </button>
           </div>
+
+          {uploading && (
+            <div className="mt-4 bg-blue-50 border border-blue-200 rounded-lg p-4 space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="h-4 w-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin shrink-0" />
+                <span className="text-blue-800 font-medium text-sm">
+                  {UPLOAD_STAGES[uploadStage]}
+                </span>
+              </div>
+
+              <div className="w-full bg-blue-100 rounded-full h-2 overflow-hidden">
+                <div
+                  className="bg-blue-500 h-2 rounded-full transition-all duration-1000"
+                  style={{ width: `${Math.min((elapsedTime / 90) * 100, 92)}%` }}
+                />
+              </div>
+
+              <p className="text-xs text-blue-500 leading-relaxed">
+                <span className="font-semibold">⏱ {elapsedTime}s elapsed.</span>{" "}
+                The Google AI free tier caps embedding at 100 requests/min, so each
+                text chunk is rate-limited to ~0.7s. A typical PDF takes 30–90s.
+                Hang tight — it only happens once per upload.
+              </p>
+            </div>
+          )}
         </section>
 
         {/* Ask Question Section */}
