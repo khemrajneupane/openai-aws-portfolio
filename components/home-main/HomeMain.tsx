@@ -14,8 +14,10 @@ import ReReadCard from "@/components/app-cards/ReReadCard";
 import RagPipeline from "../rag-pipeline/RagPipeline";
 import HfPoem from "../hf-poem-ui/HfPoem";
 import SproutSwapCard from "@/components/app-cards/SproutSwapCard";
+import { useSession } from "next-auth/react";
 
 export default function HomeMain() {
+  const { data } = useSession();
   const { t } = useTranslation("common");
   return (
     <div className="space-y-12 p-1 flex flex-col">
@@ -125,9 +127,11 @@ export default function HomeMain() {
           <FreeDaysCard />
         </div>
       </section>
-      <section>
-        <HfPoem />
-      </section>
+      {data && (
+        <section>
+          <HfPoem />
+        </section>
+      )}
       <section>
         <RagPipeline />
       </section>
