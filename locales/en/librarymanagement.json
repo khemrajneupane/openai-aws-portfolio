@@ -1,5 +1,5 @@
 {
-  "title": "Sprout & Swap",
+  "title": "Kids Rewear",
   "description": "Full-stack Next.js 14 App Router experience for managed kids’ clothing resale: parents drop off clothes, warehouse inspects/listed items, buyers purchase, and sellers are paid via Stripe while the platform orchestrates everything.",
   "auth": "Next.js 14 + TypeScript + TailwindCSS for responsive UI and layout components. NextAuth v4 with CredentialsProvider for buyer/seller/admin login plus role-aware session guards",
   "sell": "Seller landing page + bag submission workflow so parents can ship clothing for intake",

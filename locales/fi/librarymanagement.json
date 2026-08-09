@@ -1,5 +1,5 @@
 {
-  "title": "Sprout & Swap",
+  "title": "Kids Rewear",
   "description": "Täyden pinon Next.js 14 App Router -kokemus hallittuun lastenvaatteiden jälleenmyyntiin: vanhemmat tuovat vaatteet, varasto tarkistaa ja listaa tuotteet, ostajat tekevät ostoksia ja myyjille maksetaan Stripen kautta samalla kun alusta hallinnoi koko prosessia.",
   "auth": "Next.js 14 + TypeScript + TailwindCSS responsiiviseen käyttöliittymään ja layout-komponentteihin. NextAuth v4 CredentialsProviderilla ostaja/myyjä/admin-kirjautumiseen sekä roolipohjaiset istunnon suojaukset",
   "sell": "Myyjän aloitussivu + lähetysprosessi, jonka avulla vanhemmat voivat lähettää vaatteita käsittelyyn",

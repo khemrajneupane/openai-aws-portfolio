@@ -66,7 +66,7 @@ export default function SproutSwapCard() {
         {/* Footer */}
         <div className="pt-4">
           <a
-            href="https://sproutandswap.vercel.app/"
+            href="https://kidsrewear.com"
             className="inline-flex items-center gap-1 text-sm font-medium text-aws-blue hover:underline"
             target="_blank"
             rel="noopener noreferrer"
