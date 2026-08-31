@@ -7,30 +7,23 @@ export default function PoemPage() {
   const [reply, setReply] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // async function send() {
-  //   setLoading(true);
-
-  //   const res = await fetch("/api/auth/hf-poem", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify({ message: input }),
-  //   });
-
-  //   const data = await res.json();
-  //   setReply(data.reply);
-  //   setLoading(false);
-  // }
   async function send() {
     setLoading(true);
 
     try {
-      const client = await Client.connect("khemn/poetic-assistant-space");
-
-      const result = await client.predict("/generate_poem", {
-        message: input,
+      const res = await fetch("/api/poems", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message: input,
+        }),
       });
 
-      setReply(result.data as string);
+      const data = await res.json();
+
+      setReply(data.reply);
     } catch (err) {
       console.error(err);
     } finally {

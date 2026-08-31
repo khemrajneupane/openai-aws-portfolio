@@ -127,11 +127,10 @@ export default function HomeMain() {
           <FreeDaysCard />
         </div>
       </section>
-      {data && (
-        <section>
-          <HfPoem />
-        </section>
-      )}
+      <section>
+        <HfPoem />
+      </section>
+
       <section>
         <RagPipeline />
       </section>
