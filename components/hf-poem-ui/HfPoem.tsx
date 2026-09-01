@@ -1,17 +1,59 @@
 "use client";
 import { useState } from "react";
-import { Client } from "@gradio/client";
+
+const backendBaseUrl =
+  process.env.NEXT_PUBLIC_POEM_BACKEND_URL?.replace(/\/$/, "") || "";
 
 export default function PoemPage() {
   const [input, setInput] = useState("");
   const [reply, setReply] = useState("");
   const [loading, setLoading] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
+
+  async function pollForPoem(jobId: string) {
+    const startedAt = Date.now();
+
+    while (true) {
+      const statusRes = await fetch(
+        `${backendBaseUrl}/api/poem/${jobId}/status`,
+      );
+      const statusData = await statusRes.json();
+
+      if (!statusRes.ok) {
+        throw new Error(statusData?.error || "Failed to check poem status");
+      }
+
+      if (statusData.status === "completed") {
+        return statusData.result;
+      }
+
+      if (statusData.status === "failed") {
+        throw new Error(statusData.error || "Poem generation failed");
+      }
+
+      const elapsedSeconds = Math.floor((Date.now() - startedAt) / 1000);
+      const note =
+        elapsedSeconds < 20
+          ? "Generating your poem... this can take a little while."
+          : "Still working on it — the model is processing your prompt.";
+
+      setStatusMessage(note);
+      await new Promise((resolve) => setTimeout(resolve, 4000));
+    }
+  }
 
   async function send() {
+    if (!backendBaseUrl) {
+      setReply("The poem backend is not configured yet.");
+      return;
+    }
+
     setLoading(true);
+    setReply("");
+    setStatusMessage("Preparing your poem request...");
 
     try {
-      const res = await fetch("/api/poems", {
+      const res = await fetch(`${backendBaseUrl}/api/poem`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -23,9 +65,21 @@ export default function PoemPage() {
 
       const data = await res.json();
 
-      setReply(data.reply);
+      if (!res.ok) {
+        throw new Error(data?.error || "Failed to generate poem");
+      }
+
+      const poem = await pollForPoem(data.jobId);
+      setReply(poem);
+      setStatusMessage("");
     } catch (err) {
       console.error(err);
+      setReply(
+        err instanceof Error
+          ? err.message
+          : "Something went wrong while generating the poem.",
+      );
+      setStatusMessage("The request could not be completed. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -83,12 +137,18 @@ export default function PoemPage() {
                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
               ></path>
             </svg>
-            Thinking...
+            Generating poem...
           </span>
         ) : (
           <span className="cursor-pointer">Ask</span>
         )}
       </button>
+
+      {statusMessage && !reply && (
+        <p className="mt-4 text-sm text-slate-600 text-center">
+          {statusMessage}
+        </p>
+      )}
 
       {reply && (
         <pre className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200 font-mono text-sm whitespace-pre-wrap break-words text-gray-800">
